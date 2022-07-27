@@ -27,8 +27,21 @@ class Solution:
         # return: List[List[int]]
         
         # TODO: Write code below to return a nested list with the solution to the prompt
-        pass
-
+        new_m1 = []
+        new_m2 = []
+        for i in range(2):
+            row =m1[i]
+            row1 = m2[0]
+            row2 = m2[1]
+            for j in range(2):
+                product = row[0] * row1[j] + row[1] * row2[j]
+                if i ==0:
+                    new_m1.append(product)
+                else:
+                    new_m2.append(product)
+        final_matrix = [new_m1, new_m2]
+        return final_matrix
+        
 def main():
     array1 = input().split(" ")
     array2 = input().split(" ")
